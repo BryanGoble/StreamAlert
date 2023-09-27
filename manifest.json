@@ -1,21 +1,28 @@
 {
     "manifest_version": 3,
-    "version": "0.1.0",
+    "version": "0.2.0",
     "name": "StreamAlert",
     "description": "Get live stream alerts in Chrome.",
     "author": "Bryan Goble",
     "permissions": [
-        "notifications"
+        "notifications",
+        "activeTab",
+        "storage"
     ],
-    "icons": {
-
-    },
     "action": {
         "default_popup": "popup.html",
-        "default_title": "StreamAlert"
+        "default_title": "StreamAlert",
+        "default_icon": {
+
+        }
     },
     "background": {
         "service_worker": "background.js"
     },
-    "content_security_policy": "script-src 'self'; object-src 'self'"
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ]
 }

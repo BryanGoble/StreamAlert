@@ -32,3 +32,28 @@ for (var i = 0; i < buttons.length; i++) {
 
 // Get the element with id='defaultOpen' and click on it
 document.getElementById('defaultOpen').click();
+
+// When the Authorize Button is clicked, opens a new tab with the Twitch/YouTube authorization URL
+document.getElementById("authorizeTwitchButton").addEventListener("click", function() {
+    // Open the new tab
+    chrome.tabs.create({ url: "https://id.twitch.tv/oauth2/authorize?client_id=2pt7rb6wnp6d61x6zu6qd0mszew85v&redirect_uri=http://localhost:3000&response_type=token&scope=user%3Aread%3Afollows" });
+});
+
+// Handles the token received from the Content script
+chrome.runtime.onMessage.addListener(function (message) {
+    if (message.token) {
+      // Handle the token here
+      console.alert("Access Token:", message.token);
+
+      chrome.storage.sync.set({ twitch_token: message.token }).then(() => {
+        console.log("Value is set!");
+      });
+
+      chrome.storage.sync.get(["twitch_token"]).then((result) => {
+        console.log("Value currently is: " + result.key);
+      });
+    }
+    else {
+        console.log("Error!!!!!!");
+    }
+});  
