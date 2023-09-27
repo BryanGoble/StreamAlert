@@ -1,0 +1,218 @@
+body {
+    margin: 5em 0px 0px 0px;
+    width: 330px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.body-container {
+    display: inherit;
+    flex-direction: inherit;
+    width: 95%;
+}
+
+/* -- Navbar -- */
+
+#navbar {
+    top: 0;
+    position: fixed;
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    border-bottom: solid #3a3a3a;
+    background: #fff;
+    border-radius: 5px;
+}
+
+#navbar-right {
+    right: 0;
+    position: inherit;
+    margin: 0.5em 2em;
+}
+
+/* -- End of Navbar -- */
+
+/* -- Dark / Light Mode Switch -- */
+
+label {
+    width: 40px;
+    height: 20px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 20px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+label:after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    border-radius: 18px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+label, label:after {
+    transition: 0.3s;
+}
+
+label:active:after {
+    width: 26px;
+}
+
+input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+input:checked + label {
+    background: #242424;
+}
+
+input:checked + label:after {
+    left: 39px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+/* -- End of Dark / Light Mode Switch -- */
+
+/* -- Settings Page - Tab Switcher -- */
+
+body.settings {
+    margin: 0px;
+}
+
+body.settings a.back-nav {
+    display: inherit;
+    align-self: flex-start;
+    font-size: 2.5em;
+    text-decoration: none;
+    margin: 10px 15px;
+}
+
+#settings-navbar {
+    width: inherit;
+    height: 100%;
+    display: inherit;
+    flex-direction: column;
+}
+
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 50%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+.tabcontent {
+    color: black;
+    display: none;
+    padding: 10px 20px;
+    height: 100%;
+}
+
+#Settings {background-color: #ffe;}
+#Feedback {background-color: blue;}
+
+/* -- End of Settings Page - Tab Switcher -- */
+
+/* -- Live / Offline Led -- */
+
+.led-container {
+    margin: 5px 5px;
+}
+
+.led {
+    margin: 0 auto;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.default-led {
+    background-color: #666;
+    box-shadow: 0px -1px 7px 1px rgba(0, 0, 0, 0.2), inset #777 0px -1px 9px, #757575 0px 2px 12px;
+}
+
+.red-led {
+    background-color: #F00;
+    box-shadow: 0px -1px 7px 1px rgba(0, 0, 0, 0.2), inset #441313 0px -1px 9px, 0px 2px 0px rgba(255, 0, 0, 0.5);
+}
+
+/* -- End of Live / Offline Led -- */
+
+/* -- Containers -- */
+
+.live-container, .offline-container {
+    display: inherit;
+    flex-direction: inherit;
+    align-self: start;
+    border-bottom: solid 2px #eee;
+    width: 100%;
+}
+
+.container-header {
+    display: inherit;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* -- End of Containers -- */
+
+/* -- Footer -- */
+
+footer {
+    display: inherit;
+    flex-direction: inherit;
+    position: fixed;
+    bottom: 0;
+    align-items: center;
+    padding: 20px 0px;
+    border-top: solid #bbb;
+    background: white;
+    width: 100%;
+}
+
+.settings-button {
+    display: inherit;
+    text-align: center;
+    font-size: large;
+    text-decoration: none;
+    margin: 0px 0px 10px 0px;
+    align-items: center;
+}
+
+.feedback-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1em;
+}
+
+span.feedback-container a {
+    margin: 0px 10px;
+    font-size: 1rem;
+}
+
+/* -- End of Footer -- */

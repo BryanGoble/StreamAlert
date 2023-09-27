@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>StreamAlert</title>
+
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+        <!-- Font Awesome CDN for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body class="settings">
+
+        <a href="./popup.html" class="back-nav"><i class="fa-solid fa-chevron-left"></i></a>
+
+        <div id="settings-navbar">
+            <div class="settings-buttons">
+                <button id="defaultOpen" class="tablink" data-page="Settings" data-color="#333">Settings</button>
+                <button class="tablink" data-page="Feedback" data-color="blue">Feedback</button>
+            </div>
+
+            <div id="Settings" class="tabcontent">
+                <h3>Connections</h3>
+
+                <span><i class="fa-brands fa-twitch"></i>Twitch</span>
+                <button><i class="fa-solid fa-link"></i>Connect</button>
+
+                <br/>
+
+                <span><i class="fa-brands fa-youtube"></i>YouTube</span>
+                <button><i class="fa-solid fa-link-slash"></i>Disconnect</button>
+            </div>
+    
+            <div id="Feedback" class="tabcontent">
+                <h2>StreamAlert</h2>
+                <p>Live Stream Alerts for Chrome</p>
+                <a href="https://github.com/BryanGoble" target="_blank">Bryan Goble</a>
+                <p>Version 0.1.0</p>
+
+                <h3>Feedback</h3>
+                <a href="#" target="_blank">Write a Review</a>
+                <a href="https://github.com/BryanGoble/StreamAlert/issues" target="_blank">Report an Issue</a>
+
+                <h3>View</h3>
+                <a href="#" target="_blank">Release Notes</a>
+                <a href="https://github.com/BryanGoble/StreamAlert" target="_blank">Source Code</a>
+                <a href="#" target="_blank">Attributions</a>
+                <a href="https://github.com/BryanGoble/StreamAlert/blob/main/LICENSE" target="_blank">License</a>
+
+                <!-- <h3>Donate</h3>
+                <button><i class="fa-solid fa-mug-saucer"></i>Buy Me a Coffee</button> -->
+            </div>
+        </div>
+
+        <div class="body-container">
+            
+        </div>
+
+        <script src="./assets/js/popup.js"></script>
+
+    </body>
+</html>
